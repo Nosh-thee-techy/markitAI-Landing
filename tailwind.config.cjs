@@ -15,6 +15,10 @@ module.exports = {
           blue: "#2563EB",
           dark: "#1A1A2E",
           "dark-muted": "#2D2D44",
+          black: "#0A0A0A",
+          gold: "#B8860B",
+          "gold-light": "#D4A84B",
+          "gold-dark": "#8B6914",
         },
       },
       fontFamily: {

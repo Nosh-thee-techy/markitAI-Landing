@@ -30,9 +30,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="antialiased min-h-screen flex flex-col">
+      <body className="antialiased min-h-screen flex flex-col bg-white text-gray-900">
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 bg-white text-gray-900">{children}</main>
         <Footer />
         {/* Google Analytics - replace G-XXXXXXXXXX with your ID */}
         <Script

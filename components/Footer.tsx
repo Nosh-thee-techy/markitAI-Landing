@@ -4,54 +4,57 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-gray-200 bg-gray-50/50">
+    <footer
+      className="border-t border-gray-800 text-gray-200"
+      style={{ backgroundColor: "#0A0A0A" }}
+    >
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="text-lg font-bold text-brand-dark">
-              Markit<span className="text-brand-purple">AI</span>
+            <p className="text-lg font-bold text-white">
+              Markit<span className="text-amber-400">AI</span>
             </p>
-            <p className="mt-2 text-sm text-gray-600">
+            <p className="mt-2 text-sm text-gray-300">
               Your virtual marketing team powered by AI.
             </p>
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-brand-dark">Contact</h4>
+            <h4 className="text-sm font-semibold text-amber-200">Contact</h4>
             <a
               href="mailto:hello@markitai.com"
-              className="mt-2 block text-sm text-gray-600 hover:text-brand-purple"
+              className="mt-2 block text-sm text-gray-300 hover:text-amber-300 transition-colors"
             >
               hello@markitai.com
             </a>
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-brand-dark">Product</h4>
+            <h4 className="text-sm font-semibold text-amber-200">Product</h4>
             <div className="mt-2 flex flex-col gap-1">
-              <Link href="#waitlist" className="text-sm text-gray-600 hover:text-brand-purple">
+              <Link href="#waitlist" className="text-sm text-gray-300 hover:text-amber-300 transition-colors">
                 Waitlist
               </Link>
-              <Link href="#how-it-works" className="text-sm text-gray-600 hover:text-brand-purple">
+              <Link href="#how-it-works" className="text-sm text-gray-300 hover:text-amber-300 transition-colors">
                 How it works
               </Link>
-              <Link href="#faq" className="text-sm text-gray-600 hover:text-brand-purple">
+              <Link href="#faq" className="text-sm text-gray-300 hover:text-amber-300 transition-colors">
                 FAQ
               </Link>
             </div>
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-brand-dark">Legal</h4>
+            <h4 className="text-sm font-semibold text-amber-200">Legal</h4>
             <div className="mt-2 flex flex-col gap-1">
-              <Link href="/privacy" className="text-sm text-gray-600 hover:text-brand-purple">
+              <Link href="/privacy" className="text-sm text-gray-300 hover:text-amber-300 transition-colors">
                 Privacy policy
               </Link>
-              <Link href="/terms" className="text-sm text-gray-600 hover:text-brand-purple">
+              <Link href="/terms" className="text-sm text-gray-300 hover:text-amber-300 transition-colors">
                 Terms of use
               </Link>
             </div>
           </div>
         </div>
-        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 sm:flex-row">
-          <p className="text-sm text-gray-600">
+        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-gray-700 pt-8 sm:flex-row">
+          <p className="text-sm text-gray-400">
             © {year} MarkitAI. All rights reserved.
           </p>
           <div className="flex gap-6">
@@ -59,7 +62,7 @@ export function Footer() {
               href="https://twitter.com/markitai"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-brand-purple"
+              className="text-gray-400 hover:text-amber-300 transition-colors"
               aria-label="Twitter"
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -70,7 +73,7 @@ export function Footer() {
               href="https://linkedin.com/company/markitai"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-brand-purple"
+              className="text-gray-400 hover:text-amber-300 transition-colors"
               aria-label="LinkedIn"
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden>

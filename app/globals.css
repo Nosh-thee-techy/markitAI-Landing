@@ -7,6 +7,10 @@
   --brand-cyan: #34D3FC;
   --brand-blue: #2563EB;
   --brand-dark: #1A1A2E;
+  --brand-black: #0A0A0A;
+  --brand-gold: #B8860B;
+  --brand-gold-light: #D4A84B;
+  --brand-gold-dark: #8B6914;
   --foreground: #1A1A2E;
   --background: #ffffff;
 }
@@ -16,8 +20,14 @@ html {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: #1a1a2e;
+  background: #ffffff;
+}
+
+/* Ensure main content text is always visible */
+main {
+  color: #1a1a2e;
+  background: #ffffff;
 }
 
 @layer utilities {
