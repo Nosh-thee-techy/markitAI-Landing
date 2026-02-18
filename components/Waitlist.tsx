@@ -61,7 +61,7 @@ export function Waitlist() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-bold text-brand-dark sm:text-4xl">
-            Join the waitlist
+            Reserve your spot
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-gray-600">
             Be first to get access. We'll only use your email to notify you at launch.
@@ -152,8 +152,14 @@ export function Waitlist() {
                 disabled={status === "loading"}
                 className="w-full rounded-2xl bg-gradient-to-r from-brand-blue to-brand-purple py-4 text-base font-semibold text-white shadow-lg shadow-brand-purple/25 hover:shadow-brand-purple/40 disabled:opacity-70 transition-all"
               >
-                {status === "loading" ? "Joining…" : "Join the waitlist"}
+                {status === "loading" ? "Reserving…" : "Reserve My Spot"}
               </button>
+              <p className="text-center text-sm text-gray-500">
+                Questions?{" "}
+                <a href="mailto:hello@markitai.com" className="text-brand-purple hover:underline">
+                  hello@markitai.com
+                </a>
+              </p>
             </form>
           )}
         </motion.div>

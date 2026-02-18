@@ -2,32 +2,18 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { Logo } from "./Logo";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [logoError, setLogoError] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200/80 bg-white/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          {!logoError ? (
-            <Image
-              src="/logo.png"
-              alt="MarkitAI"
-              width={140}
-              height={40}
-              className="h-9 w-auto object-contain"
-              priority
-              onError={() => setLogoError(true)}
-            />
-          ) : (
-            <span className="text-xl font-bold text-brand-dark">
-              Markit<span className="text-brand-purple">AI</span>
-            </span>
-          )}
+          {/* Use Logo component so the brand always shows. Add public/logo.png to use your uploaded image. */}
+          <Logo className="h-9 w-auto" />
         </Link>
         <nav className="hidden md:flex items-center gap-8">
           <Link
@@ -35,6 +21,12 @@ export function Header() {
             className="text-sm font-medium text-brand-dark/80 hover:text-brand-purple transition-colors"
           >
             How it works
+          </Link>
+          <Link
+            href="#features"
+            className="text-sm font-medium text-brand-dark/80 hover:text-brand-purple transition-colors"
+          >
+            Features
           </Link>
           <Link
             href="#different"
@@ -81,6 +73,9 @@ export function Header() {
             <nav className="flex flex-col gap-1 px-4 py-4">
               <Link href="#how-it-works" className="py-2 text-brand-dark" onClick={() => setMobileOpen(false)}>
                 How it works
+              </Link>
+              <Link href="#features" className="py-2 text-brand-dark" onClick={() => setMobileOpen(false)}>
+                Features
               </Link>
               <Link href="#different" className="py-2 text-brand-dark" onClick={() => setMobileOpen(false)}>
                 Why MarkitAI

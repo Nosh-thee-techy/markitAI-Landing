@@ -8,6 +8,14 @@ const funnelSteps = [
   { label: "Sales", value: "847", width: "45%", color: "from-brand-purple to-brand-purple-dark" },
 ];
 
+const kpis = [
+  { label: "Interactions", value: "3,240", sub: "Last 30 days" },
+  { label: "Sales", value: "847", sub: "Attributed" },
+  { label: "ROI", value: "2.4x", sub: "Campaign" },
+];
+
+const lineData = [30, 45, 38, 55, 48, 62, 58, 72, 68, 78, 75, 85];
+
 export function DashboardPreview() {
   return (
     <section className="bg-gray-50/80 py-20 sm:py-28" id="dashboard">
@@ -26,8 +34,9 @@ export function DashboardPreview() {
             See engagement → interaction → sales in a single funnel. Clear insights, not graph overload.
           </p>
         </motion.div>
+
         <motion.div
-          className="mx-auto mt-12 max-w-2xl rounded-3xl border border-gray-200 bg-white p-6 shadow-xl sm:p-8"
+          className="mx-auto mt-12 max-w-3xl rounded-3xl border border-gray-200 bg-white p-6 shadow-xl sm:p-8"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
@@ -39,6 +48,49 @@ export function DashboardPreview() {
               Last 30 days
             </span>
           </div>
+
+          {/* Line graph */}
+          <div className="mb-8">
+            <p className="text-xs font-medium text-gray-500 mb-3">Product performance & engagement</p>
+            <div className="h-32 flex items-end gap-1">
+              {lineData.map((h, i) => (
+                <motion.div
+                  key={i}
+                  className="flex-1 min-w-[8px] rounded-t bg-gradient-to-t from-brand-blue to-brand-cyan"
+                  initial={{ height: 0 }}
+                  whileInView={{ height: `${h}%` }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.03 }}
+                  whileHover={{ opacity: 0.9 }}
+                />
+              ))}
+            </div>
+            <div className="flex justify-between mt-1 text-xs text-gray-400">
+              <span>Week 1</span>
+              <span>Week 4</span>
+            </div>
+          </div>
+
+          {/* KPI cards */}
+          <div className="grid grid-cols-3 gap-4 mb-8">
+            {kpis.map((k, i) => (
+              <motion.div
+                key={k.label}
+                className="rounded-xl border border-gray-100 bg-gray-50/80 p-4 text-center transition-shadow hover:shadow-md"
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <p className="text-2xl font-bold text-brand-dark">{k.value}</p>
+                <p className="text-sm font-medium text-gray-700">{k.label}</p>
+                <p className="text-xs text-gray-500">{k.sub}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Funnel */}
           <div className="space-y-6">
             {funnelSteps.map((step, i) => (
               <div key={step.label}>

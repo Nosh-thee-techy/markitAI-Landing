@@ -11,15 +11,21 @@ const steps = [
   },
   {
     step: 2,
-    title: "We create & post campaigns",
+    title: "We generate campaigns & post",
     description:
       "MarkitAI analyzes performance and creates campaigns, then posts on your approved platforms—actively, not just scheduled.",
   },
   {
     step: 3,
-    title: "We track real sales impact",
+    title: "Track results & weekly insights",
     description:
-      "See engagement → interaction → sales in one place. Real conversion metrics, not vanity numbers.",
+      "See engagement → interaction → sales in one place. Real conversion metrics, plus voice and dashboard updates.",
+  },
+  {
+    step: 4,
+    title: "Optimize campaigns (AI recommendations)",
+    description:
+      "Get AI-driven suggestions to improve performance and ROI over time.",
   },
 ];
 
@@ -38,7 +44,7 @@ export function HowItWorks() {
             How it works
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-gray-600">
-            Three steps from your data to real sales.
+            Four steps from your data to real sales.
           </p>
         </motion.div>
         <div className="mt-16 space-y-12 sm:space-y-16">

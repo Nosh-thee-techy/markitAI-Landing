@@ -5,20 +5,24 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    q: "Is MarkitAI just a scheduling tool?",
-    a: "No. MarkitAI actively runs campaigns and posts on your behalf on approved platforms. You also get weekly AI-driven business intelligence updates (audio + dashboard), so it works like a virtual marketing team, not a simple scheduler.",
+    q: "How is MarkitAI different from a scheduler?",
+    a: "MarkitAI is not just a scheduler. It actively runs campaigns and posts on your behalf on approved platforms. You also get weekly AI-driven business intelligence updates (audio + dashboard), so it works like a virtual marketing team.",
   },
   {
-    q: "What data sources can I connect?",
-    a: "You can add product data via manual input, CSV upload, or integrations like Shopify, HubSpot, Jumia, and Kilimall. We use what you already have to create and run campaigns.",
+    q: "Does MarkitAI post for me?",
+    a: "Yes. We generate campaigns and post with your permission on your connected platforms. You stay in control of which channels and when; we do the creation and publishing.",
   },
   {
-    q: "How do you track real sales impact?",
-    a: "We focus on the funnel: engagement → interaction → sales. You see conversion metrics that tie to revenue, not just likes or impressions, in one clear dashboard.",
+    q: "How secure is my data?",
+    a: "We take security seriously. Your product and business data are stored securely and used only to run your campaigns and provide insights. We follow industry best practices and do not sell your data.",
+  },
+  {
+    q: "What platforms are supported?",
+    a: "You can connect via manual input, CSV upload, or integrations including Shopify, HubSpot, Jumia, Kilimall, and we're adding more ecommerce and social platforms (e.g. Instagram, Facebook, WhatsApp) for posting.",
   },
   {
     q: "When will MarkitAI launch?",
-    a: "We're building in the open and will notify everyone on the waitlist first. Join the list to get early access and updates.",
+    a: "We're building in the open and will notify everyone on the waitlist first. Reserve your spot to get early access and updates.",
   },
 ];
 
